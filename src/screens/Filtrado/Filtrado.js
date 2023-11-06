@@ -43,28 +43,13 @@ class Home extends Component {
     render(){
         return(
             <View>
-                <Text>HOME</Text>
+                <Text>FILTRADO</Text>
                 <TouchableOpacity onPressOut={()=>this.logout()}>
                     <Text>Logout</Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={ () => this.props.navigation.navigate('Mi perfil')}>
-                   <Text>Mi perfil</Text>
-                </TouchableOpacity>
-
-                <Text>Crear nuevo post</Text>
-                <PostForm />
-
-                <Text>Lista de posteos creados</Text>
                 
-                <FlatList
-                    data={this.state.posts}
-                    keyExtractor={ unPost => unPost.id }
-                    renderItem={ ({item}) => <Post dataPost = {item} />  }
-                />
+                
 
-                <TouchableOpacity onPress={ () => this.props.navigation.navigate('Filtrado')}>
-                   <Text>Filtrar Perfiles</Text>
-                </TouchableOpacity>
             </View>
 
 
