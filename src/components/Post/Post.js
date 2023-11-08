@@ -56,6 +56,7 @@ class Post extends Component {
 
     render(){
         console.log(this.props)
+        console.log(this.props.dataPost.datos.likes)
         return (
             <View>
                 <Text>{ this.props.dataPost.datos.owner }</Text>
